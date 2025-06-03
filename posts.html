@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>lyn's microblog</title>
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<style>
+  article {
+    padding-left: 20rem;
+    padding-right: 20rem;
+  }
+</style>
+
+
+
+<body>
+
+  <nav>
+    <a href="home.html">home</a> | 
+    <a href="about.html">about</a> | 
+    <a 6href="posts.html">posts</a> | 
+    <a href="contact.html">contact</a>
+  </nav>
+
+
+  <hr style="height:2px">
+
+<article id="post1" class="post wrapper">
+  <div class="post-header">
+  <h2>First Blog Post</h2>
+  <span class="post-date"><em>June 3rd, 2025</em></span>
+  </div>
+  <p> I'm attempting to restart my blogging efforts because i'm in between 'jobs' now. i've officially graduated from university and i'm waiting to start my first full time job in a months time.
+  for the first time in awhile, i actually have the time to do anything i want to, and yet i find myself not doing much.</p>
+  <p> i'm actually pretty bored. i shuttle between instagram, youtube and reddit during my waking hours. i can't commit to a 2h movie (even though i scroll endless youtube shorts in the same amount of time). 
+  to combat this, i decided to pick up reading again. i find that i am only able to concentrate on reading in the mornings, before i am exposed to any form of internet media. i am easily distracted. 
+  anyway, my current read is Listen by Kathryn Mannix; it's been a pretty useful read so far. </p>
+  <p> another few hobbies that i'm hoping to pick up since i don't have to study 24/7 are - learning japanese/french and skateboarding. i hope i have the time to do that even with my full time job.</p>
+  <p> so that's that. let's see how long i can sustain this microblog for. hopefully this isn't just another one of my fads.</p>
+  <p> also don't come at me for my unorganised code for this website. i'm not sure how to use external libraries or software thingys to organise the tags in my blog. i probably should figure out how to use Jekyll,
+  at least gpt is reccommending me to use it. </p>
+</article>
+
+
+
+<!--filter script-->
+
+<script>
+  const hash = window.location.hash;
+  if (hash) {
+    const posts = document.querySelectorAll('.post');
+    posts.forEach(post => {
+      if ('#' + post.id !== hash) {
+        post.style.display = 'none';
+      }
+    });
+  }
+</script>

@@ -1,0 +1,110 @@
+body {
+  font-family: serif;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+nav {
+  width: 100%;
+  padding: 8px 12px;
+}
+
+hr {
+  border: none;
+  border-top: 1px solid #ccc;
+  margin: 0;
+}
+
+.wrapper {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 20px 15px;
+  box-sizing: border-box;
+}
+
+
+.container {
+  display: flex;
+  gap: 40px;
+  align-items: flex-start; 
+}
+
+
+.main-content {
+  flex: 2;
+}
+
+.sidebar {
+  flex: 1;
+  max-width: 250px;
+}
+
+.sidebar ul {
+  margin-top: 0.2rem; /* or 0 if you want zero gap */
+  margin-bottom: 0;
+  padding-left: 1.2rem; /* default bullet spacing */
+}
+
+.sidebar p {
+  margin-bottom: 0; /* so it doesn't push the list down */
+}
+
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+  }
+}
+
+.post-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+}
+
+article > .post-header + p {
+  margin-top: 0;
+}
+
+.post-title {
+  margin: 0;
+}
+
+.post-date {
+  font-style: italic;
+  white-space: nowrap;
+}
+
+.para {
+  padding-left: 1.2rem; /* default paragraph indent */
+  padding-right: 1.2rem; /* default paragraph indent */
+}
+
+/* Global link styles */
+a {
+  text-decoration: underline;
+  color: blue;
+}
+
+a:hover {
+  color: black !important;
+  cursor: crosshair;
+}
+
+a:visited {
+  color: purple;
+}
+
+/* Override nav links to always be blue */
+nav a:visited {
+  color: blue !important;
+}
+
+nav a:hover {
+  color: black !important;
+  cursor: crosshair;
+}
+
+nav a:visited:hover {
+  color: black !important;
+}
